@@ -14,7 +14,6 @@ async function logDR() {
     let n = await util.acceptCMDInput();
     n = Number(n);
     util.printToCMD(20 * Math.log10(2) * n);
-    util.exit();
 }
 
 util.runSolution(logDR);

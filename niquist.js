@@ -5,8 +5,8 @@
 // sample frequency
 // 2 * fmax
 
-// Niquist Rate , Calculated by finding  multiplying the highest frequency
-// by 2, The Niquist rate is >= the highest frequency
+// Niquist Rate , Calculated by multiplying the highest frequency
+// by 2, The Niquist rate is >= two times the highest frequency
 
 const { Util } = require('./models/util');
 const utils = new Util();
@@ -24,7 +24,6 @@ async function niquistRate() {
     let highestFrequency = freq1 < freq2 ? freq2 : freq1;
     const niquist = highestFrequency * 2;
     utils.printToCMD(`The Niquist rate should be >= ${niquist}`);
-    utils.exit();
 }
 
 utils.runSolution(niquistRate);
